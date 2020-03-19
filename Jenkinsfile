@@ -28,9 +28,9 @@ pipeline {
 		stage('Deployment') {
 	    	steps {
 				print "Deployment is done!"
-//				sh 'cp target/gamutkart.war /opt/apache-tomcat-8.5.38/webapps'
-//				sh '"JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" "/opt/apache-tomcat-8.5.38/bin/startup.sh"'
-//                              sh '"JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64" "/opt/apache-tomcat-8.5.38/bin/shutdown.sh"'
+//				sh 'cp "/root/.jenkins/workspace/pipeline-demo/target/gamutkart.war" "/opt/apache-tomcat-8.5.38/webapps"'
+//				sh 'sh "/opt/apache-tomcat-8.5.38/bin/shutdown.sh"'
+//                              sh 'sh "/opt/apache-tomcat-8.5.38/bin/startup.sh"'
 	    	}
 		}
     }
