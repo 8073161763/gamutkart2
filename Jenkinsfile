@@ -28,9 +28,11 @@ pipeline {
 		stage('Deployment') {
 	    	steps {
 				print "Deployment is done!"
-//				sh 'cp /root/.jenkins/workspace/pipeline-demo/target/gamutkart.war /opt/apache-tomcat-8.5.38/webapps'
-//				sh 'sh /opt/apache-tomcat-8.5.38/bin/shutdown.sh'
-//                              sh 'sh /opt/apache-tomcat-8.5.38/bin/startup.sh'
+                                script{
+				sh 'cp /root/.jenkins/workspace/pipeline-demo/target/gamutkart.war /opt/apache-tomcat-8.5.38/webapps'
+				sh 'sh /opt/apache-tomcat-8.5.38/bin/shutdown.sh'
+                                sh 'sh /opt/apache-tomcat-8.5.38/bin/startup.sh'
+                                }
 	    	}
 		}
     }
